@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="eco.ico">
+    <title>Be Fit! - Lanchonete Fit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="brand">
+                <img src="logo2.png" alt="Be Fit Logo" class="logo-img">
+                <div class="logo">Be Fit!</div>
+            </div>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#" class="carrinho-btn" onclick="toggleCarrinho(); return false;">
+                    Carrinho <span class="carrinho-qtd">0</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cardapio">
+            <h2 style="text-align: center; color: #5b7862;">Nosso Cardápio</h2>
+            <div class="categorias">
+                <button class="categoria-btn active" onclick="filtrarCategoria('todos')">Todos</button>
+                <button class="categoria-btn" onclick="filtrarCategoria('lanches')">Lanches</button>
+                <button class="categoria-btn" onclick="filtrarCategoria('refeicoes')">Refeições</button>
+                <button class="categoria-btn" onclick="filtrarCategoria('bebidas')">Bebidas</button>
+                <button class="categoria-btn" onclick="filtrarCategoria('sobremesas')">Sobremesas</button>
+            </div>
+            <div class="produtos-grid"></div>
+        </section>
+
+        <section id="carrinho" class="carrinho-section hidden">
+            <button onclick="toggleCarrinho()" class="btn-fechar" style="float: right;">X</button>
+            <h2>Seu Pedido</h2>
+            <div class="carrinho-items"></div>
+            <div class="carrinho-total">
+                <p>Total: R$ <span id="total">0.00</span></p>
+            </div>
+            <button onclick="finalizarPedido()" class="btn-finalizar">Finalizar Pedido</button>
+        </section>
+
+        <div id="modal-checkout" class="modal hidden">
+            <div class="modal-content">
+                <h3>Finalizar Pedido</h3>
+                <form id="checkout-form">
+                    <input type="text" placeholder="Nome" required>
+                    <input type="tel" placeholder="Telefone" required>
+                    <input type="text" placeholder="Endereço" required>
+                    
+                    <h4>Forma de Pagamento:</h4>
+                    <select name="pagamento" required>
+                        <option value="cartao">Cartão</option>
+                        <option value="pix">PIX</option>
+                        <option value="dinheiro">Dinheiro</option>
+                    </select>
+
+                    <button type="submit" class="btn-confirmar">Confirmar Pedido</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 

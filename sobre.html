@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="eco.ico">
+    <title>Be Fit! - Sobre Nós</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div class="brand">
+                <img src="logo2.png" alt="Be Fit Logo" class="logo-img">
+                <div class="logo">Be Fit!</div>
+            </div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#cardapio">Cardápio</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#" class="carrinho-btn" onclick="toggleCarrinho(); return false;">
+                    Carrinho <span class="carrinho-qtd">0</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sobre-section">
+            <h2>Sobre o Be Fit!</h2>
+            <div class="sobre-content">
+                <div class="sobre-info">
+                    <h3>Nossa História</h3>
+                    <p>O Be Fit! nasceu em 2024 com a missão de oferecer opções saudáveis e saborosas para nossos clientes. Acreditamos que comer bem não significa abrir mão do sabor!</p>
+                    
+                    <h3>Nossa Missão</h3>
+                    <p>Proporcionar refeições nutritivas e deliciosas, contribuindo para um estilo de vida mais saudável.</p>
+
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda a Sábado: 11h às 22h<br>
+                    Domingo: 11h às 15h</p>
+
+                    <h3>Localização</h3>
+                    <p>Rua Centro - Perto da Praça dos Girassóis<br>
+                    Palmas - TO</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="avaliacoes-section">
+            <h2>Avaliações dos Clientes</h2>
+            <div class="avaliacoes-container">
+                <div class="avaliacao-form">
+                    <h3>Deixe sua Avaliação</h3>
+                    <form id="form-avaliacao">
+                        <input type="text" placeholder="Seu Nome" required>
+                        <select required>
+                            <option value="">Selecione uma nota</option>
+                            <option value="5">5 estrelas</option>
+                            <option value="4">4 estrelas</option>
+                            <option value="3">3 estrelas</option>
+                            <option value="2">2 estrelas</option>
+                            <option value="1">1 estrela</option>
+                        </select>
+                        <textarea placeholder="Seu comentário" required></textarea>
+                        <button type="submit">Enviar Avaliação</button>
+                    </form>
+                </div>
+
+                <div class="avaliacoes-lista">
+                    <!-- Exemplo de avaliações -->
+                    <div class="avaliacao-item">
+                        <div class="avaliacao-header">
+                            <h4>Maria Silva</h4>
+                            <div class="estrelas">★★★★★</div>
+                        </div>
+                        <p>Ótima comida! Super recomendo os wraps e sucos naturais.</p>
+                    </div>
+
+                    <div class="avaliacao-item">
+                        <div class="avaliacao-header">
+                            <h4>João Santos</h4>
+                            <div class="estrelas">★★★★</div>
+                        </div>
+                        <p>Ambiente agradável e comida saudável muito saborosa!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
